@@ -1,10 +1,10 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distinct", "Distinct.csproj", "{D335E751-3763-4DAC-8FFE-85FBB791F786}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distinct", "Distinct\Distinct.csproj", "{D335E751-3763-4DAC-8FFE-85FBB791F786}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Distinct_NetCore", "Distinct_NetCore\Distinct_NetCore.csproj", "{3EF52B0E-1A48-48CB-86EB-D9DDFB344822}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,8 +16,15 @@ Global
 		{D335E751-3763-4DAC-8FFE-85FBB791F786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D335E751-3763-4DAC-8FFE-85FBB791F786}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D335E751-3763-4DAC-8FFE-85FBB791F786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF52B0E-1A48-48CB-86EB-D9DDFB344822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF52B0E-1A48-48CB-86EB-D9DDFB344822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF52B0E-1A48-48CB-86EB-D9DDFB344822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF52B0E-1A48-48CB-86EB-D9DDFB344822}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5641138F-2860-4FF6-825C-F6C67C887FB8}
 	EndGlobalSection
 EndGlobal
