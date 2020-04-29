@@ -1,8 +1,8 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
-* **[NorthwindObjects.cs](./CS/NorthwindObjects.cs) (VB: [NorthwindObjects.vb](./VB/NorthwindObjects.vb))**
+* [Form1.cs](./CS/Distinct/Form1.cs) (VB: [Form1.vb](./VB/Distinct/Form1.vb))
+* **[NorthwindObjects.cs](./CS/Distinct/NorthwindObjects.cs) (VB: [NorthwindObjects.vb](./VB/Distinct/NorthwindObjects.vb))**
 <!-- default file list end -->
 # How to load unique (distinct) data via XPO
 
