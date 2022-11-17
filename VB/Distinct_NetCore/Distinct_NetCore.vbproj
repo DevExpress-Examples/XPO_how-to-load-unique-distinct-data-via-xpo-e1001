@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Distinct\Form1.vb" Link="Form1.vb" />
+    <Compile Include="..\Distinct\NorthwindObjects.vb" Link="NorthwindObjects.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Distinct\Form1.resx" Link="Form1.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Distinct\app.config" Link="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.WindowsDesktop.Win" Version="20.1.16-ctp" />
+  </ItemGroup>
+</Project>

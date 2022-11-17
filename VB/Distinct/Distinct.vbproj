@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
     <ProjectType>Local</ProjectType>
     <ProductVersion>10.0.30306.1</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -22,15 +23,12 @@
     <RootNamespace>
     </RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>
+    </StartupObject>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <OptionExplicit>On</OptionExplicit>
-    <OptionCompare>Binary</OptionCompare>
-    <OptionStrict>Off</OptionStrict>
-    <OptionInfer>On</OptionInfer>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -41,8 +39,7 @@
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
+    <DefineConstants>DEBUG,TRACE</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
@@ -54,6 +51,7 @@
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
@@ -65,8 +63,7 @@
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
+    <DefineConstants>TRACE</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
     <DebugSymbols>false</DebugSymbols>
@@ -78,6 +75,7 @@
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
@@ -89,62 +87,50 @@
     <Reference Include="DevExpress.Pdf.v20.1.Core">
       <Name>DevExpress.Pdf.v20.1.Core</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Office.v20.1.Core">
       <Name>DevExpress.Office.v20.1.Core</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.RichEdit.v20.1.Core">
       <Name>DevExpress.RichEdit.v20.1.Core</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.RichEdit.v20.1.Export">
       <Name>DevExpress.RichEdit.v20.1.Export</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Printing.v20.1.Core">
       <Name>DevExpress.Printing.v20.1.Core</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Data.v20.1">
       <Name>DevExpress.Data.v20.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Data.Desktop.v20.1">
       <Name>DevExpress.Data.Desktop.v20.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Utils.v20.1">
       <Name>DevExpress.Utils.v20.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Xpo.v20.1">
       <Name>DevExpress.Xpo.v20.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v20.1">
       <Name>DevExpress.XtraEditors.v20.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraPrinting.v20.1">
       <Name>DevExpress.XtraPrinting.v20.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v20.1">
       <Name>DevExpress.XtraGrid.v20.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -167,17 +153,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Linq" />
-    <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
-    <Import Include="System.Windows.Forms" />
-    <Import Include="System" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -194,9 +169,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="My Project\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>

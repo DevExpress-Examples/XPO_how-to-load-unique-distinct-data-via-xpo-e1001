@@ -1,9 +1,9 @@
-﻿Imports System
-Imports System.Windows.Forms
+Imports System
 Imports DevExpress.Xpo
 Imports System.Linq
 
 Namespace Distinct
+
     ''' <summary>
     ''' Summary description for Form1.
     ''' </summary>
@@ -11,11 +11,17 @@ Namespace Distinct
         Inherits Form
 
         Private gridControl1 As DevExpress.XtraGrid.GridControl
+
         Private gridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+
         Private colCompanyName As DevExpress.XtraGrid.Columns.GridColumn
-        Private WithEvents XPView As Button
-        Private WithEvents LINQ As Button
-        Private WithEvents PersAlias As Button
+
+        Private XPView As Button
+
+        Private LINQ As Button
+
+        Private PersAlias As Button
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -27,6 +33,7 @@ Namespace Distinct
             '
             InitializeComponent()
         End Sub
+
         ''' <summary>
         ''' Clean up any resources being used.
         ''' </summary>
@@ -35,134 +42,158 @@ Namespace Distinct
                 If components IsNot Nothing Then
                     components.Dispose()
                 End If
+
                 If gridView1 IsNot Nothing Then
                     gridView1.Dispose()
                     gridView1 = Nothing
                 End If
+
                 If colCompanyName IsNot Nothing Then
                     colCompanyName.Dispose()
                     colCompanyName = Nothing
                 End If
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
-            Me.gridControl1 = New DevExpress.XtraGrid.GridControl()
-            Me.gridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-            Me.colCompanyName = New DevExpress.XtraGrid.Columns.GridColumn()
-            Me.XPView = New System.Windows.Forms.Button()
-            Me.LINQ = New System.Windows.Forms.Button()
-            Me.PersAlias = New System.Windows.Forms.Button()
-            DirectCast(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.gridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+            gridControl1 = New DevExpress.XtraGrid.GridControl()
+            gridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+            colCompanyName = New DevExpress.XtraGrid.Columns.GridColumn()
+            XPView = New Windows.Forms.Button()
+            LINQ = New Windows.Forms.Button()
+            PersAlias = New Windows.Forms.Button()
+            CType(gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(gridView1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' gridControl1
             ' 
-            Me.gridControl1.Cursor = System.Windows.Forms.Cursors.Default
-            Me.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.gridControl1.Location = New System.Drawing.Point(0, 59)
-            Me.gridControl1.MainView = Me.gridView1
-            Me.gridControl1.Name = "gridControl1"
-            Me.gridControl1.Size = New System.Drawing.Size(613, 388)
-            Me.gridControl1.TabIndex = 0
-            Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() { Me.gridView1})
+            gridControl1.Cursor = Windows.Forms.Cursors.[Default]
+            gridControl1.Dock = Windows.Forms.DockStyle.Bottom
+            gridControl1.Location = New System.Drawing.Point(0, 59)
+            gridControl1.MainView = gridView1
+            gridControl1.Name = "gridControl1"
+            gridControl1.Size = New System.Drawing.Size(613, 388)
+            gridControl1.TabIndex = 0
+            gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {gridView1})
             ' 
             ' gridView1
             ' 
-            Me.gridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() { Me.colCompanyName})
-            Me.gridView1.GridControl = Me.gridControl1
-            Me.gridView1.Name = "gridView1"
-            Me.gridView1.OptionsView.AllowCellMerge = True
-            Me.gridView1.OptionsView.ShowFooter = True
-            Me.gridView1.OptionsView.ShowGroupPanel = False
-            Me.gridView1.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() { New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.colCompanyName, DevExpress.Data.ColumnSortOrder.Ascending)})
+            gridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {colCompanyName})
+            gridView1.GridControl = gridControl1
+            gridView1.Name = "gridView1"
+            gridView1.OptionsView.AllowCellMerge = True
+            gridView1.OptionsView.ShowFooter = True
+            gridView1.OptionsView.ShowGroupPanel = False
+            gridView1.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(colCompanyName, DevExpress.Data.ColumnSortOrder.Ascending)})
             ' 
             ' colCompanyName
             ' 
-            Me.colCompanyName.Caption = "Company Name"
-            Me.colCompanyName.FieldName = "Company Name"
-            Me.colCompanyName.Name = "colCompanyName"
-            Me.colCompanyName.OptionsColumn.ReadOnly = True
-            Me.colCompanyName.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() { New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count)})
-            Me.colCompanyName.Visible = True
-            Me.colCompanyName.VisibleIndex = 0
+            colCompanyName.Caption = "Company Name"
+            colCompanyName.FieldName = "Company Name"
+            colCompanyName.Name = "colCompanyName"
+            colCompanyName.OptionsColumn.ReadOnly = True
+            colCompanyName.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count)})
+            colCompanyName.Visible = True
+            colCompanyName.VisibleIndex = 0
             ' 
             ' XPView
             ' 
-            Me.XPView.Location = New System.Drawing.Point(12, 13)
-            Me.XPView.Name = "XPView"
-            Me.XPView.Size = New System.Drawing.Size(160, 37)
-            Me.XPView.TabIndex = 1
-            Me.XPView.Text = "XPView"
-            Me.XPView.UseVisualStyleBackColor = True
-            ' 
+            XPView.Location = New System.Drawing.Point(12, 13)
+            XPView.Name = "XPView"
+            XPView.Size = New System.Drawing.Size(160, 37)
+            XPView.TabIndex = 1
+            XPView.Text = "XPView"
+            XPView.UseVisualStyleBackColor = True
+             ''' Cannot convert AssignmentExpressionSyntax, System.NullReferenceException: Object reference not set to an instance of an object.
+'''    at ICSharpCode.CodeConverter.VB.NodesVisitor.VisitAssignmentExpression(AssignmentExpressionSyntax node)
+'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
+'''    at ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
+''' 
+''' Input:
+'''             this.XPView.Click += new System.EventHandler(this.LoadViaXPView)
+'''  ' 
             ' LINQ
             ' 
-            Me.LINQ.Location = New System.Drawing.Point(213, 13)
-            Me.LINQ.Name = "LINQ"
-            Me.LINQ.Size = New System.Drawing.Size(193, 37)
-            Me.LINQ.TabIndex = 2
-            Me.LINQ.Text = "LINQ"
-            Me.LINQ.UseVisualStyleBackColor = True
-            ' 
+LINQ.Location = New System.Drawing.Point(213, 13)
+            LINQ.Name = "LINQ"
+            LINQ.Size = New System.Drawing.Size(193, 37)
+            LINQ.TabIndex = 2
+            LINQ.Text = "LINQ"
+            LINQ.UseVisualStyleBackColor = True
+             ''' Cannot convert AssignmentExpressionSyntax, System.NullReferenceException: Object reference not set to an instance of an object.
+'''    at ICSharpCode.CodeConverter.VB.NodesVisitor.VisitAssignmentExpression(AssignmentExpressionSyntax node)
+'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
+'''    at ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
+''' 
+''' Input:
+'''             this.LINQ.Click += new System.EventHandler(this.LoadViaLINQ)
+'''  ' 
             ' PersAlias
             ' 
-            Me.PersAlias.Location = New System.Drawing.Point(431, 13)
-            Me.PersAlias.Name = "PersAlias"
-            Me.PersAlias.Size = New System.Drawing.Size(170, 37)
-            Me.PersAlias.TabIndex = 3
-            Me.PersAlias.Text = "PersistentAlias"
-            Me.PersAlias.UseVisualStyleBackColor = True
-            ' 
+PersAlias.Location = New System.Drawing.Point(431, 13)
+            PersAlias.Name = "PersAlias"
+            PersAlias.Size = New System.Drawing.Size(170, 37)
+            PersAlias.TabIndex = 3
+            PersAlias.Text = "PersistentAlias"
+            PersAlias.UseVisualStyleBackColor = True
+             ''' Cannot convert AssignmentExpressionSyntax, System.NullReferenceException: Object reference not set to an instance of an object.
+'''    at ICSharpCode.CodeConverter.VB.NodesVisitor.VisitAssignmentExpression(AssignmentExpressionSyntax node)
+'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
+'''    at ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
+''' 
+''' Input:
+'''             this.PersAlias.Click += new System.EventHandler(this.LoadDataWithPersistentAlias)
+'''  ' 
             ' Form1
             ' 
-            Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
             Me.ClientSize = New System.Drawing.Size(613, 447)
-            Me.Controls.Add(Me.PersAlias)
-            Me.Controls.Add(Me.LINQ)
-            Me.Controls.Add(Me.XPView)
-            Me.Controls.Add(Me.gridControl1)
+            Me.Controls.Add(PersAlias)
+            Me.Controls.Add(LINQ)
+            Me.Controls.Add(XPView)
+            Me.Controls.Add(gridControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.gridView1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(gridView1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
-        #End Region
 
+#End Region
         ''' <summary>
         ''' The main entry point for the application.
         ''' </summary>
-        <STAThread> _
+        <STAThread>
         Shared Sub Main()
-            DevExpress.Xpo.XpoDefault.ConnectionString = DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString(".\SQLEXPRESS", "Northwind")
+            XpoDefault.ConnectionString = DB.MSSqlConnectionProvider.GetConnectionString(".\SQLEXPRESS", "Northwind")
             Application.Run(New Form1())
         End Sub
 
-        Private Sub LoadViaXPView(ByVal sender As Object, ByVal e As EventArgs) Handles XPView.Click
-            Dim xpView1 As New XPView(XpoDefault.Session, GetType(Northwind.Order))
-            xpView1.Properties.Add(New DevExpress.Xpo.ViewProperty("Company Name", DevExpress.Xpo.SortDirection.None, "[Customer.CompanyName]", True, True))
+        Private Sub LoadViaXPView(ByVal sender As Object, ByVal e As EventArgs)
+            Dim xpView1 As XPView = New XPView(XpoDefault.Session, GetType(Northwind.Order))
+            xpView1.Properties.Add(New ViewProperty("Company Name", SortDirection.None, "[Customer.CompanyName]", True, True))
             gridControl1.DataSource = xpView1
             RefreshColumns()
         End Sub
 
-        Private Sub LoadViaLINQ(ByVal sender As Object, ByVal e As EventArgs) Handles LINQ.Click
-            gridControl1.DataSource = (New XPQuery(Of Northwind.Order)(XpoDefault.Session)).Select(Function(s) s.Customer.CompanyName).Distinct()
+        Private Sub LoadViaLINQ(ByVal sender As Object, ByVal e As EventArgs)
+            gridControl1.DataSource = New XPQuery(Of Northwind.Order)(XpoDefault.Session).[Select](Function(s) s.Customer.CompanyName).Distinct()
             RefreshColumns()
         End Sub
 
-        Private Sub LoadDataWithPersistentAlias(ByVal sender As Object, ByVal e As EventArgs) Handles PersAlias.Click
+        Private Sub LoadDataWithPersistentAlias(ByVal sender As Object, ByVal e As EventArgs)
             gridControl1.DataSource = New XPCollection(Of Northwind.Employee)()
             RefreshColumns()
         End Sub
+
         Public Sub RefreshColumns()
             gridControl1.MainView.PopulateColumns()
             gridView1.Columns(0).Summary.Add(DevExpress.Data.SummaryItemType.Count)
